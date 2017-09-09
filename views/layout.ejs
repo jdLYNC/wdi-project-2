@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Project 2</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/app.js" charset="utf-8"></script>
+    <%- include ./partials/_stylesheets %>
   </head>
   <body>
+    <header>
+      <%- include ./partials/_navbar %>
+    </header>
     <%- body %>
+    <%- include ./partials/_scripts %>
   </body>
 </html>

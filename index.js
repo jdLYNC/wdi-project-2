@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
-const { port } = require('./config/environment');
+const { port, dbURI } = require('./config/environment');
 const expressLayouts  = require('express-ejs-layouts');
+
+const morgan = require('morgan');
 
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
+
+app.use(morgan('dev'));
+const mongoose = require('mongoose');
+mongoose.connect(dbURI, { useMongoClient: true })
 
 app.use(expressLayouts);
 app.use(express.static(`${__dirname}/public`));

@@ -27,9 +27,18 @@ function rocketsCreate(req, res) {
     .catch(err => res.render('error', { err }));
 }
 
+function rocketsEdit(req, res) {
+  Rocket
+    .findById(req.params.id)
+    .exec()
+    .then(rocket => res.render('rockets/edit', { rocket }))
+    .catch(err => res.render('error', { err }));
+}
+
 module.exports = {
   index: rocketsIndex,
   show: rocketsShow,
   new: rocketsNew,
-  create: rocketsCreate
+  create: rocketsCreate,
+  edit: rocketsEdit
 };

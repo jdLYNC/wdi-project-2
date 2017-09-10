@@ -14,4 +14,7 @@ router.route('/rockets/new')
 router.route('/rockets/:id')
   .get(rockets.show);
 
+router.route('/rockets/:id/edit')
+  .get(rockets.edit);
+
 module.exports = router;

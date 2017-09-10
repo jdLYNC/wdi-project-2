@@ -29,6 +29,8 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.18.0",
     "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-ejs-layouts": "^2.3.1",

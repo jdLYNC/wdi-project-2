@@ -1,0 +1,17 @@
+<main class="container">
+  <h1>Rocket Index</h1>
+  <div class="row">
+    <% rockets.forEach(rocket => { %>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="<%= rocket.image.url %>" alt="<%= rocket.image.description %>">
+          <div class="card-block">
+            <a href="/rockets/<%= rocket.id %>"><h2 class="card-title"><%= rocket.name %></h2></a>
+            <p>Manufacturer: <%= rocket.manufacturer %><br>
+            Country: <%= rocket.country %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</main>

@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const rockets = require('../controllers/rockets');
 const registrations = require('../controllers/registrations');
+const sessions = require('../controllers/sessions');
 
 router.get('/', (req, res) => res.render('home'));
 
@@ -23,5 +24,9 @@ router.route('/rockets/:id/edit')
 router.route('/register')
   .get(registrations.new)
   .post(registrations.create);
+
+router.route('/login')
+  .get(sessions.new)
+  .post(sessions.create);
 
 module.exports = router;

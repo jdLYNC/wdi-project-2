@@ -12,7 +12,9 @@ router.route('/rockets/new')
   .get(rockets.new);
 
 router.route('/rockets/:id')
-  .get(rockets.show);
+  .get(rockets.show)
+  .put(rockets.update)
+  .delete(rockets.delete);
 
 router.route('/rockets/:id/edit')
   .get(rockets.edit);

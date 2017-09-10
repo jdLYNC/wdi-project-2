@@ -11,5 +11,9 @@
   </div>
   <div class="col-sm-12">
     <a href="/rockets/<%= rocket.id %>/edit" class="btn btn-primary">Edit Rocket</a>
+    <form method="POST" action="/rockets/<%= rocket.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="btn btn-danger">Delete</button>
+    </form>
   </div>
 </div>

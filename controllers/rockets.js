@@ -35,10 +35,33 @@ function rocketsEdit(req, res) {
     .catch(err => res.render('error', { err }));
 }
 
+function rocketsUpdate(req, res) {
+  Rocket
+    .findById(req.params.id)
+    .exec()
+    .then(rocket => {
+      rocket = Object.assign(rocket, req.body);
+      return rocket.save();
+    })
+    .then(rocket => res.redirect(`/rockets/${rocket.id}`))
+    .catch(err => res.render('error', { err }));
+}
+
+function rocketsDelete(req, res) {
+  Rocket
+    .findById(req.params.id)
+    .exec()
+    .then(rocket => rocket.remove())
+    .then(() => res.redirect('/rockets'))
+    .catch(err => res.render('error', { err }));
+}
+
 module.exports = {
   index: rocketsIndex,
   show: rocketsShow,
   new: rocketsNew,
   create: rocketsCreate,
-  edit: rocketsEdit
+  edit: rocketsEdit,
+  update: rocketsUpdate,
+  delete: rocketsDelete
 };

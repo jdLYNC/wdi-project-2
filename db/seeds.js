@@ -5,8 +5,10 @@ const { dbURI } = require('../config/environment');
 mongoose.connect(dbURI, { useMongoClient: true });
 
 const Rocket = require('../models/rocket');
+const User = require('../models/user');
 
 Rocket.collection.drop();
+User.collection.drop();
 
 Rocket
   .create([
@@ -49,5 +51,17 @@ Rocket
     }
   ])
   .then((rocket) => console.log(`${rocket.length} rockets created!`))
+  .catch((err) => console.log(err))
+  .finally(() => mongoose.connection.close());
+
+User
+  .create([{
+    username: 'spaceman josh',
+    email: 'josh@ga.co',
+    password: 'memory',
+    passwordConfirmation: 'memory',
+    admin: true
+  }])
+  .then((user) => console.log(`${user.length} users created!`))
   .catch((err) => console.log(err))
   .finally(() => mongoose.connection.close());

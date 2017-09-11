@@ -1,6 +1,7 @@
 const router = require('express').Router();
 
 const rockets = require('../controllers/rockets');
+const users = require('../controllers/users');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 const secureRoute = require('../lib/secureRoute');
@@ -35,5 +36,8 @@ router.route('/login')
   .post(sessions.create);
 
 router.get('/logout', sessions.delete);
+
+router.route('/users/:id')
+  .get(users.show);
 
 module.exports = router;

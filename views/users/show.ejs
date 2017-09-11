@@ -1,0 +1,5 @@
+<h1><%= user.username %></h1>
+<h2>Cards</h2>
+<p><% user.cards.forEach(card => { %>
+  <%= card.name %>,
+<% }) %>

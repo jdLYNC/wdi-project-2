@@ -3,15 +3,30 @@
 <p><% user.cards.forEach(card => { %>
   <%= card.name %>,
 <% }) %></p>
-
+<section class="container">
+<div class="row">
+<div class="col-lg-6 d-flex flex-column-reverse">
 <% usrMessages.forEach(message => { %>
-  currentUserID <%= currentUser.id %><br>
-  sent to <%= message.to %><br>
-  do they match? <%= currentUser.id === message.to %><br>
-  sent from <%= message.from %><br>
-  do they match? <%= currentUser.id === message.from %><br>
-  <% if (currentUser.id === message.from || currentUser.id === message.to) { %>
-  <h3>From: <%= message.from %></h3>
-  <p><%= message.text %></p>
+  <% if (currentUser.id === message.from.id) { %>
+    <div class="row justify-content-start">
+      <div class="card">
+        <div class="card-block">
+          <h3>To: <%= message.to.username %></h3>
+          <p><%= message.text %></p>
+        </div>
+      </div>
+    </div>
+  <% } else if (currentUser.id === message.to.id) { %>
+    <div class="row justify-content-end">
+      <div class="card card-inverse card-primary">
+        <div class="card-block">
+          <h3>From: <%= message.from.username %></h3>
+          <p><%= message.text %></p>
+        </div>
+      </div>
+    </div>
   <% } %>
 <% }) %>
+</div>
+</div>
+</section>

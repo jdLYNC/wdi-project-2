@@ -9,6 +9,7 @@ function usersShow(req, res) {
     .then(user => {
       Message
         .find()
+        .populate('to from')
         .exec()
         .then(usrMessages => res.render('users/show', { user, usrMessages }));
     })

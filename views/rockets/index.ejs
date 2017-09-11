@@ -3,6 +3,17 @@
   <div class="row">
     <% rockets.forEach(rocket => { %>
       <div class="col-lg-3 col-md-4 col-sm-6">
+      <% if(locals.isAuthenticated) { %>
+        <form method="POST" action="/rockets/<%= rocket.id %>/favorite" class="favorite">
+          <button>
+            <% if(locals.currentUser.hasFavorited(rocket)) { %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            <% } else { %>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            <% } %>
+          </button>
+        </form>
+      <% } %>
         <div class="card">
           <img class="card-img-top img-fluid" src="<%= rocket.image.url %>" alt="<%= rocket.image.description %>">
           <div class="card-block">

@@ -56,6 +56,18 @@ function rocketsDelete(req, res) {
     .catch(err => res.render('error', { err }));
 }
 
+function rocketsFavorite(req, res) {
+  if (!req.currentUser.cards.find(rocket => rocket.id === req.params.id)) {
+    console.log('Pushing rocket to cards');
+    req.currentUser.cards.push(req.params.id);
+  } else {
+    console.log('Removing rocket from cards');
+    req.currentUser.cards = req.currentUser.cards.filter(rocket => rocket.id !== req.params.id);
+  }
+  req.currentUser.save()
+    .then(() => res.redirect('back'));
+}
+
 module.exports = {
   index: rocketsIndex,
   show: rocketsShow,
@@ -63,5 +75,6 @@ module.exports = {
   create: rocketsCreate,
   edit: rocketsEdit,
   update: rocketsUpdate,
-  delete: rocketsDelete
+  delete: rocketsDelete,
+  favorite: rocketsFavorite
 };

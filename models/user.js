@@ -10,6 +10,13 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema
+  .virtual('rockets', {
+    ref: 'Rocket',
+    localField: '_id',
+    foreignField: 'user'
+  });
+
+userSchema
   .virtual('passwordConfirmation')
   .set(function setPasswordConfirmation(passwordConfirmation) {
     this._passwordConfirmation = passwordConfirmation;
@@ -31,6 +38,11 @@ userSchema.pre('save', function hashPassword(next) {
 
 userSchema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password);
+};
+
+userSchema.methods.hasFavorited = function hasFavorited(rocket) {
+  if(!rocket) return false;
+  return !!this.cards.find(_rocket => rocket.id === _rocket.id);
 };
 
 module.exports = mongoose.model('User', userSchema);

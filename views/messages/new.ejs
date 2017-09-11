@@ -1,0 +1,22 @@
+<h1>New Rocket</h1>
+<main class="container">
+  <div class="row">
+    <form method="POST" action="/users/messages">
+      <input type="hidden" name="from" value="<%= currentUser.id %>">
+      <h2>New Message</h2>
+      <div class="form-group">
+        <label for="to">To:</label>
+        <select name="to" id="to" class="form-control" required>
+          <% users.forEach((user) => { %>
+            <option value="<%= user.id %>"><%= user.username %></option>
+          <% }) %>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="text">Message:</label>
+        <textarea class="form-control" id="text" rows="3" name="text" placeholder="Enter Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</main>

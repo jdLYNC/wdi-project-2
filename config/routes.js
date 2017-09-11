@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const rockets = require('../controllers/rockets');
 const users = require('../controllers/users');
+const messages = require('../controllers/messages');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 const secureRoute = require('../lib/secureRoute');
@@ -37,7 +38,13 @@ router.route('/login')
 
 router.get('/logout', sessions.delete);
 
+router.route('/users/messages')
+  .post(secureRoute, messages.create);
+
+router.route('/users/messages/new')
+  .get(secureRoute, messages.new);
+
 router.route('/users/:id')
-  .get(users.show);
+  .get(secureRoute, users.show);
 
 module.exports = router;

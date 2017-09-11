@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   admin: { type: Boolean },
-  cards: [{ type: mongoose.Schema.ObjectId, ref: 'Rocket' }]
+  cards: [{ type: mongoose.Schema.ObjectId, ref: 'Rocket' }],
+  messages: [{ type: mongoose.Schema.ObjectId, ref: 'Message' }]
 });
 
 userSchema

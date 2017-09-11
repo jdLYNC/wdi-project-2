@@ -6,9 +6,11 @@ mongoose.connect(dbURI, { useMongoClient: true });
 
 const Rocket = require('../models/rocket');
 const User = require('../models/user');
+const Message = require('../models/message');
 
 Rocket.collection.drop();
 User.collection.drop();
+Message.collection.drop();
 
 Rocket
   .create([
@@ -61,6 +63,7 @@ User
     password: 'memory',
     passwordConfirmation: 'memory',
     admin: true
+    
   }])
   .then((user) => console.log(`${user.length} users created!`))
   .catch((err) => console.log(err))

@@ -9,11 +9,15 @@
     <h3>First Flight: <%= rocket.firstFlight %></h3>
     <p><%= rocket.description %></p>
   </div>
-  <div class="col-sm-12">
-    <a href="/rockets/<%= rocket.id %>/edit" class="btn btn-primary">Edit Rocket</a>
-    <form method="POST" action="/rockets/<%= rocket.id %>">
-      <input type="hidden" name="_method" value="DELETE">
-      <button class="btn btn-danger">Delete</button>
-    </form>
-  </div>
+  <% if (locals.isAuthenticated) { %>
+    <% if (currentUser.admin) { %>
+      <div class="col-sm-12">
+        <form method="POST" action="/rockets/<%= rocket.id %>">
+          <a href="/rockets/<%= rocket.id %>/edit" class="btn btn-primary">Edit Rocket</a>
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    <% } %>
+  <% } %>
 </div>

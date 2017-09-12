@@ -1,15 +1,25 @@
-<h1><%= user.username %></h1>
-<h2>Cards</h2>
-<p><% user.cards.forEach(card => { %>
-  <%= card.name %>,
-<% }) %></p>
-<section class="container">
+<main class="container">
   <div class="row">
-    <div class="col-md-6">
-      <%- include ../messages/_index %>
-    </div>
-    <div class="col-md-6">
-      <%- include ../messages/_new %>
+    <div class="col">
+      <h1><%= user.username %></h1>
     </div>
   </div>
-</section>
+  <div class="row">
+    <div class="col">
+      <h2>Favorite Rockets</h2>
+      <p><% user.cards.forEach(card => { %>
+        <a href="../rockets/<%= card.id %>"><%= card.name %></a>,
+      <% }) %></p>
+    </div>
+  </div>
+  <section class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <%- include ../messages/_new %>
+      </div>
+      <div class="col-md-8">
+        <%- include ../messages/_index %>
+      </div>
+    </div>
+  </section>
+</main>

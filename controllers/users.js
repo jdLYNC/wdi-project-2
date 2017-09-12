@@ -5,6 +5,7 @@ const Promise = require('bluebird');
 function usersShow(req, res) {
 
   const data = {
+    selectedUser: req.query.userId,
     user: User.findById(req.params.id).populate('rockets cards').exec(),
     usrMessages: Message.find({
       $or: [

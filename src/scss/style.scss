@@ -32,9 +32,6 @@ body {
 .btn-success {
   background-color: rgba(10, 130, 10, 0.6);
   border-color: rgba(30, 30, 30, 0);
-  :hover {
-
-  }
 }
 
 .img-fluid {
@@ -70,9 +67,40 @@ body {
     width: 25vw;
     height: 25vw;
     overflow: hidden;
+    form {
+      position: relative;
+      button {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 1.3em;
+      }
+    }
   }
   img {
     width: 25vw;
     height: auto;
   }
+}
+
+.message-viewer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  form {
+    margin: 10px;
+  }
+  .card {
+    margin: 5px 20px;
+  }
+}
+
+.image-container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }

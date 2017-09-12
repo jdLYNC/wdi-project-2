@@ -1,7 +1,45 @@
 body {
-  color: tomato;
+  background-color: #F4F4F4;
+}
+
+.isHomepage {
+  background-image: url('https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/16230925_192132901263247_5631962607763062784_n.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
 }
 
 .jumbotron {
-  background-image: url('https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/16230925_192132901263247_5631962607763062784_n.jpg');
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.bg-faded {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+  background-color: rgba(30, 30, 30, 0.5);
+  border-color: rgba(30, 30, 30, 0);
+}
+
+.img-fluid {
+  max-height: 93vh;
+}
+
+.registration-box {
+  color: white;
+  padding: 8vh 15vw;
+  font-weight: lighter;
+  h1 {
+    font-weight: lighter;
+  }
+  form {
+    width: 25vw;
+  }
 }

@@ -1,22 +1,23 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 d-flex justify-content-center">
     <img class="img-fluid" src="<%= rocket.image.url %>" alt="<%= rocket.image.description %>">
   </div>
-  <div class="col-sm-6">
-    <h1><%= rocket.name %></h1>
-    <h2>Manufacturer: <%= rocket.manufacturer %><br>
-    Country: <%= rocket.country %></h2>
-    <h3>First Flight: <%= rocket.firstFlight %></h3>
-    <p><%= rocket.description %></p>
-  </div>
-  <% if (locals.isAuthenticated) { %>
-    <% if (currentUser.admin) { %>
-      <div class="col-sm-12">
-        <form method="POST" action="/rockets/<%= rocket.id %>">
-          <a href="/rockets/<%= rocket.id %>/edit" class="btn btn-primary">Edit Rocket</a>
-          <input type="hidden" name="_method" value="DELETE">
-          <button class="btn btn-danger">Delete</button>
-        </form>
+  <div class="col-sm-6  d-flex align-items-center">
+    <div class="row">
+      <h1><%= rocket.name %></h1>
+      <h2>Manufacturer: <%= rocket.manufacturer %><br>
+      Country: <%= rocket.country %></h2>
+      <p><%= rocket.description %></p>
+    </div>
+    <% if (locals.isAuthenticated) { %>
+      <% if (currentUser.admin) { %>
+        <div class="col-sm-12">
+          <form method="POST" action="/rockets/<%= rocket.id %>">
+            <a href="/rockets/<%= rocket.id %>/edit" class="btn btn-primary">Edit Rocket</a>
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
       </div>
     <% } %>
   <% } %>

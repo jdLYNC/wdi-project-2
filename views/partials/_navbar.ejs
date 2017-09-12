@@ -1,18 +1,18 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/">Rocket Trumps</a>
+  <a class="navbar-brand" href="/"><i class="fa fa-rocket" aria-hidden="true"></i></a>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item active d-flex align-items-center">
         <a class="nav-link" href="/rockets">Rockets</a>
       </li>
       <% if (!locals.isAuthenticated) { %>
-        <li class="nav-item active">
+        <li class="nav-item active d-flex align-items-center">
           <a class="nav-link" href="/register">Register</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active hidden-sm-up">
           <a class="nav-link" href="/login">Login</a>
         </li>
       <% } else { %>
@@ -32,8 +32,17 @@
         </li>
       <% } %>
     </ul>
-
-    <% if (locals.isAuthenticated) { %>
+    <% if (!locals.isAuthenticated) { %>
+    <span class="navbar-text hidden-sm-down">
+      <form class="form-inline" method="POST" action="/login">
+        <div class="input-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </div>
+      </form>
+    </span>
+    <% } else if (locals.isAuthenticated) { %>
       <span class="navbar-text">
         Logged in as <strong><%= currentUser.username %></strong>
       </span>

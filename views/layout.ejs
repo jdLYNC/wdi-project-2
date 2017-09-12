@@ -6,7 +6,7 @@
     <title>Project 2</title>
     <%- include ./partials/_stylesheets %>
   </head>
-  <body>
+  <body class="<% if (locals.isHomepage) { %>isHomepage<% } %>">
     <header>
       <%- include ./partials/_navbar %>
     </header>

@@ -90,7 +90,7 @@ Rocket
       name: 'Ariane 4',
       manufacturer: 'Arianespace',
       country: 'France',
-      description: 'Soyuz-2, GRAU index 14A14, is the collective designation for the new version of the Russian Soyuz rocket. In its basic form, it is a three-stage carrier rocket for placing payloads into low Earth orbit. The first-stage boosters and two core stages feature uprated engines with improved injection systems, compared to the previous versions of the Soyuz. Digital flight control and telemetry systems allow the rocket to be launched from a fixed launch platform, whereas the launch platforms for earlier Soyuz rockets had to be rotated as the rocket could not perform a roll to change its heading in flight.',
+      description: 'The Ariane 4 was an expendable launch system, designed by the Centre national d\'études spatiales while being manufactured and marketed by its subsidiary Arianespace. The launcher became justly known as the "workhorse" of the Ariane family. Since its first flight on 15 June 1988 until the final flight, which was performed on 15 February 2003, it attained 113 successful launches out of 116 launches to have been conducted.',
       firstFlight: 'November 9, 1967',
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Ariane4.jpg',
@@ -113,6 +113,24 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg/1024px-Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg',
         description: 'Artist\'s representation of Falcon Heavy Reusable on launch pad'
+      },
+      // Rocket stats
+      height: 110.6,
+      payload: 140000,
+      stages: 3,
+      costPerLaunch: 185,
+      totalLaunches: 13,
+      successes: 12,
+      failures: 1
+    }, { // Rocket info
+      name: 'Delta IV',
+      manufacturer: ['Boeing', 'BDS', 'ULA'],
+      country: 'USA',
+      description: 'Delta IV is an expendable launch system in the Delta rocket family. The rockets\' main components are designed by Boeing\'s Defense, Space & Security division and built in the United Launch Alliance (ULA) facility in Decatur, Alabama. Final assembly is completed at the launch site by ULA. The rockets were designed to launch payloads into orbit for the United States Air Force Evolved Expendable Launch Vehicle (EELV) program and commercial satellite business. Delta IV rockets are available in five versions: Medium, Medium+ (4,2), Medium+ (5,2), Medium+ (5,4), and Heavy, to cover a range of payload size and weight. Delta IV was primarily designed to satisfy the needs of the U.S. military.',
+      firstFlight: 'November 9, 1967',
+      image: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Delta_IV_Medium_Rocket_DSCS.jpg',
+        description: 'Delta IV Medium launch carrying DSCS III-B6'
       },
       // Rocket stats
       height: 110.6,

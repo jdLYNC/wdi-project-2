@@ -8,7 +8,7 @@ const sessions = require('../controllers/sessions');
 const secureRoute = require('../lib/secureRoute');
 const adminRoute = require('../lib/adminRoute');
 
-router.get('/', (req, res) => res.render('home'));
+router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 
 router.route('/rockets')
   .get(rockets.index)
@@ -28,8 +28,10 @@ router.route('/rockets/:id/edit')
 router.route('/rockets/:id/favorite')
   .post(secureRoute, rockets.favorite);
 
+router.get('/register', (req, res) => res.render('home', { isHomepage: true, isRegistration: true }));
+
 router.route('/register')
-  .get(registrations.new)
+//   .get(registrations.new)
   .post(registrations.create);
 
 router.route('/login')

@@ -9,7 +9,7 @@ function usersCreate(req, res) {
     .create(req.body)
     .then(user => {
       req.flash('info', `Thanks for registering, ${user.username}! Please login.`);
-      res.redirect('/login');
+      res.redirect('/');
     })
     .catch(err => res.render('error', { err }));
 }

@@ -1,7 +1,16 @@
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3">Roquettes</h1>
-    <p class="lead">A site with pictures of rockets on.</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Roquette</h1>
+        <p class="lead">A site with pictures of rockets on.</p>
+        <h1 class="display-3"><i class="fa fa-rocket" aria-hidden="true"></i></h1>
+      </div>
+    </div>
   </div>
-</div>
+  <% if (locals.isRegistration) { %>
+    <div class="col-md-6 registration-box">
+      <%- include ./registrations/new %>
+    </div>
+  </div>
+<% } %>

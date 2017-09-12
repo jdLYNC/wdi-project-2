@@ -2,7 +2,6 @@
 <main class="container">
   <div class="row">
     <form method="POST" action="/rockets">
-      <h2>Rocket Info</h2>
       <div class="form-group">
         <label for="name">Rocket Name</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Rocket Name" required>
@@ -19,12 +18,12 @@
         <label for="description">Description</label>
         <textarea class="form-control" id="description" rows="3" name="description" placeholder="Enter Rocket Description" required></textarea>
       </div>
-      <div class="form-group row">
+      <%# <div class="form-group row">
         <label for="firstFlight" class="col-2 col-form-label">Date of First Flight</label>
         <div class="col-10">
           <input class="form-control" type="date" value="" id="firstFlight" name="firstFlight" required>
         </div>
-      </div>
+      </div>%>
       <div class="form-group">
         <label for="image.url">Image URL</label>
         <input type="text" class="form-control" id="image.url" name="image.url" placeholder="Enter Rocket Image URL" required>
@@ -33,7 +32,7 @@
         <label for="image.description">Image Description</label>
         <input type="text" class="form-control" id="image.description" name="image.description" placeholder="Enter Rocket Image Description" required>
       </div>
-      <h2>Rocket Stats</h2>
+      <%# <h2>Rocket Stats</h2>
       <div class="form-group row">
         <label for="height" class="col-2 col-form-label">Height</label>
         <div class="col-10">
@@ -79,7 +78,7 @@
           <input class="form-control" type="number" value="" id="failures" name="failures" aria-describedby="failuresHelp" required>
           <small id="failuresHelp" class="form-text text-muted">All launch failures including partials.</small>
         </div>
-      </div>
+      </div>%>
       <button type="submit" class="btn btn-primary">Create Rocket!</button>
     </form>
   </div>

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 <% if (locals.isRegistration || locals.isRocketNew) { %>hidden-sm-down<% } %>">
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">Roquette</h1>
@@ -10,7 +10,11 @@
   </div>
   <% if (locals.isRegistration) { %>
     <div class="col-md-6 registration-box">
-      <%- include ./registrations/new %>
+      <%- include ./registrations/_new %>
     </div>
+  <% } else if (locals.isRocketNew) { %>
+      <div class="col-md-6 rocket-box">
+        <%- include ./rockets/new %>
+      </div>
   </div>
 <% } %>

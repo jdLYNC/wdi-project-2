@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -28,6 +29,14 @@ body {
   border-color: rgba(30, 30, 30, 0);
 }
 
+.btn-success {
+  background-color: rgba(10, 130, 10, 0.6);
+  border-color: rgba(30, 30, 30, 0);
+  :hover {
+
+  }
+}
+
 .img-fluid {
   max-height: 93vh;
 }
@@ -40,6 +49,30 @@ body {
     font-weight: lighter;
   }
   form {
+    width: 110%;
+  }
+}
+
+.rocket-box {
+  color: white;
+  padding: 8vh 10vw;
+  font-weight: lighter;
+  h1 {
+    font-weight: lighter;
+  }
+  form {
+    width: 110%;
+  }
+}
+
+.img-index {
+  .card {
     width: 25vw;
+    height: 25vw;
+    overflow: hidden;
+  }
+  img {
+    width: 25vw;
+    height: auto;
   }
 }

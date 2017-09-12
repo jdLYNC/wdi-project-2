@@ -9,26 +9,23 @@
         <a class="nav-link" href="/rockets">Rockets</a>
       </li>
       <% if (!locals.isAuthenticated) { %>
-        <li class="nav-item active d-flex align-items-center">
-          <a class="nav-link" href="/register">Register</a>
-        </li>
-        <li class="nav-item active hidden-sm-up">
+        <li class="nav-item active hidden-md-up">
           <a class="nav-link" href="/login">Login</a>
         </li>
+        <li class="nav-item active d-flex align-items-center hidden-md-up">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
       <% } else { %>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/<%= currentUser.id %>"><i class="fa fa-user" aria-hidden="true"></i></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/messages/new"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-        </li>
         <% if (currentUser.admin) { %>
           <li class="nav-item active">
             <a class="nav-link" href="/rockets/new">New Rocket</a>
           </li>
         <% } %>
         <li class="nav-item active">
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link" href="/users/<%= currentUser.id %>"><i class="fa fa-user" aria-hidden="true"></i> Account</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
         </li>
       <% } %>
     </ul>
@@ -39,6 +36,7 @@
           <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
           <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
           <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+          <a class="btn btn-success" href="/register">Register</a>
         </div>
       </form>
     </span>

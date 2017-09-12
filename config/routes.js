@@ -28,10 +28,8 @@ router.route('/rockets/:id/edit')
 router.route('/rockets/:id/favorite')
   .post(secureRoute, rockets.favorite);
 
-router.get('/register', (req, res) => res.render('home', { isHomepage: true, isRegistration: true }));
-
 router.route('/register')
-//   .get(registrations.new)
+  .get(registrations.new)
   .post(registrations.create);
 
 router.route('/login')

@@ -1,8 +1,12 @@
 <main class="container">
-  <h1>Rocket Index</h1>
   <div class="row">
+    <div clas="col">
+      <h1>Rocket Index</h1>
+    </div>
+  </div>
+  <div class="row img-index">
     <% rockets.forEach(rocket => { %>
-      <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="col-lg-4 col-md-4 col-sm-6">
       <% if(locals.isAuthenticated) { %>
         <form method="POST" action="/rockets/<%= rocket.id %>/favorite" class="favorite">
           <button>
@@ -14,14 +18,11 @@
           </button>
         </form>
       <% } %>
-        <div class="card">
-          <img class="card-img-top img-fluid" src="<%= rocket.image.url %>" alt="<%= rocket.image.description %>">
-          <div class="card-block">
-            <a href="/rockets/<%= rocket.id %>"><h2 class="card-title"><%= rocket.name %></h2></a>
-            <p>Manufacturer: <%= rocket.manufacturer %><br>
-            Country: <%= rocket.country %></p>
+        <a href="/rockets/<%= rocket.id %>">
+          <div class="card">
+            <img class="card-img-top img-fluid" src="<%= rocket.image.url %>" alt="<%= rocket.image.description %>">
           </div>
-        </div>
+        </a>
       </div>
     <% }) %>
   </div>

@@ -17,7 +17,13 @@ function rocketsShow(req, res) {
 }
 
 function rocketsNew(req, res) {
-  res.render('rockets/new');
+
+  const page = {
+    isHomepage: true,
+    isRocketNew: true
+  };
+
+  res.render('home', page);
 }
 
 function rocketsCreate(req, res) {

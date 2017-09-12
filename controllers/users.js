@@ -11,7 +11,12 @@ function usersShow(req, res) {
         .find()
         .populate('to from')
         .exec()
-        .then(usrMessages => res.render('users/show', { user, usrMessages }));
+        .then(usrMessages => {
+          User
+            .find()
+            .exec()
+            .then(users => res.render('users/show', { user, usrMessages, users }));
+        });
     })
     .catch(err => res.render('error', { err }));
 }

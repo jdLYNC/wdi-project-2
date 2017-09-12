@@ -50,6 +50,78 @@ Rocket
       totalLaunches: 13,
       successes: 12,
       failures: 1
+    }, { // Rocket info
+      name: 'Long March',
+      manufacturer: 'CALT',
+      country: 'China',
+      description: 'The Long March 3B (Chinese: 长征三号乙火箭, Chang Zheng 3B), also known as the CZ-3B and LM-3B, is a Chinese orbital carrier rocket. Introduced in 1996, it is launched from Launch Area 2 and 3 at the Xichang Satellite Launch Center in Sichuan. A three-stage rocket with four strap-on liquid rocket boosters, it is currently the most powerful member of the Long March rocket family and the heaviest of the Long March 3 rocket family, and is mainly used to place communications satellites into geosynchronous orbits.',
+      firstFlight: 'November 9, 1967',
+      image: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Launch_of_Long_March_3B_Rocket.jpg/1024px-The_Launch_of_Long_March_3B_Rocket.jpg',
+        description: 'The launch of a Long March 3B carrier rocket at Xichang Satellite Launch Center.'
+      },
+      // Rocket stats
+      height: 110.6,
+      payload: 140000,
+      stages: 3,
+      costPerLaunch: 185,
+      totalLaunches: 13,
+      successes: 12,
+      failures: 1
+    }, { // Rocket info
+      name: 'Soyuz-2',
+      manufacturer: 'TsSKB-Progress',
+      country: 'Russia',
+      description: 'Soyuz-2, GRAU index 14A14, is the collective designation for the new version of the Russian Soyuz rocket. In its basic form, it is a three-stage carrier rocket for placing payloads into low Earth orbit. The first-stage boosters and two core stages feature uprated engines with improved injection systems, compared to the previous versions of the Soyuz. Digital flight control and telemetry systems allow the rocket to be launched from a fixed launch platform, whereas the launch platforms for earlier Soyuz rockets had to be rotated as the rocket could not perform a roll to change its heading in flight.',
+      firstFlight: 'November 9, 1967',
+      image: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Soyuz_2_metop.jpg/540px-Soyuz_2_metop.jpg',
+        description: 'A MetOp spacecraft ready for the launch atop a Soyuz-2.1a rocket.'
+      },
+      // Rocket stats
+      height: 110.6,
+      payload: 140000,
+      stages: 3,
+      costPerLaunch: 185,
+      totalLaunches: 13,
+      successes: 12,
+      failures: 1
+    }, { // Rocket info
+      name: 'Ariane 4',
+      manufacturer: 'Arianespace',
+      country: 'France',
+      description: 'Soyuz-2, GRAU index 14A14, is the collective designation for the new version of the Russian Soyuz rocket. In its basic form, it is a three-stage carrier rocket for placing payloads into low Earth orbit. The first-stage boosters and two core stages feature uprated engines with improved injection systems, compared to the previous versions of the Soyuz. Digital flight control and telemetry systems allow the rocket to be launched from a fixed launch platform, whereas the launch platforms for earlier Soyuz rockets had to be rotated as the rocket could not perform a roll to change its heading in flight.',
+      firstFlight: 'November 9, 1967',
+      image: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Ariane4.jpg',
+        description: 'The first ever Ariane 4 launch from Kourou on June 14, 1988'
+      },
+      // Rocket stats
+      height: 110.6,
+      payload: 140000,
+      stages: 3,
+      costPerLaunch: 185,
+      totalLaunches: 13,
+      successes: 12,
+      failures: 1
+    }, { // Rocket info
+      name: 'Falcon Heavy',
+      manufacturer: 'SpaceX',
+      country: 'USA',
+      description: 'Falcon Heavy, previously known as the Falcon 9 Heavy, is a reusable super heavy lift space launch vehicle being designed and manufactured by SpaceX. The Falcon Heavy is a variant of the Falcon 9 launch vehicle and will consist of a strengthened Falcon 9 rocket core, with two additional Falcon 9 first stages as strap-on boosters. This will increase the low Earth orbit (LEO) maximum payload to 63.8 metric tonnes, compared to 22.8 tonnes for a Falcon 9 full thrust. Falcon Heavy was designed from the outset to carry humans into space, and would enable crewed missions to the Moon or Mars.',
+      firstFlight: 'November 9, 1967',
+      image: {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg/1024px-Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg',
+        description: 'Artist\'s representation of Falcon Heavy Reusable on launch pad'
+      },
+      // Rocket stats
+      height: 110.6,
+      payload: 140000,
+      stages: 3,
+      costPerLaunch: 185,
+      totalLaunches: 13,
+      successes: 12,
+      failures: 1
     }
   ])
   .then((rocket) => console.log(`${rocket.length} rockets created!`))
@@ -63,7 +135,7 @@ User
     password: 'memory',
     passwordConfirmation: 'memory',
     admin: true
-    
+
   }])
   .then((user) => console.log(`${user.length} users created!`))
   .catch((err) => console.log(err))

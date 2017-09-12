@@ -1,0 +1,24 @@
+<div class="d-flex flex-column-reverse">
+  <% usrMessages.forEach(message => { %>
+    <% if (currentUser.id === message.from.id) { %>
+      <div class="row justify-content-start">
+        <div class="card">
+          <div class="card-block">
+            <h3>To: <%= message.to.username %></h3>
+            <p><%= message.text %></p>
+          </div>
+        </div>
+      </div>
+    <% } else if (currentUser.id === message.to.id) { %>
+      <% message.read = true %>
+      <div class="row justify-content-end">
+        <div class="card card-inverse card-primary">
+          <div class="card-block">
+            <h3>From: <%= message.from.username %></h3>
+            <p><%= message.text %></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  <% }) %>
+</div>

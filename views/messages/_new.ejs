@@ -1,14 +1,16 @@
-<h1>New Rocket</h1>
+<h1>New Message</h1>
 <main class="container">
   <div class="row">
     <form method="POST" action="/users/messages">
       <input type="hidden" name="from" value="<%= currentUser.id %>">
-      <h2>New Message</h2>
+      <input type="hidden" name="read" value="<%= false %>">
       <div class="form-group">
         <label for="to">To:</label>
         <select name="to" id="to" class="form-control" required>
           <% users.forEach((user) => { %>
-            <option value="<%= user.id %>"><%= user.username %></option>
+            <% if (user.id !== currentUser.id ) { %>
+              <option value="<%= user.id %>"><%= user.username %></option>
+            <% } %>
           <% }) %>
         </select>
       </div>

@@ -14,7 +14,7 @@ function messagesNew(req, res) {
 function messagesCreate(req, res) {
   Message
     .create(req.body)
-    .then(() => res.redirect('/'))
+    .then(() => res.redirect(req.path))
     .catch(err => res.render('error', { err }));
 }
 

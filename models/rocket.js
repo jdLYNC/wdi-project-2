@@ -11,17 +11,7 @@ const rocketSchema = new mongoose.Schema({
   manufacturer: { type: String, required: true },
   country: { type: String, required: true },
   description: { type: String, required: true, unique: true },
-  firstFlight: { type: Date, required: true },
-  image: imageSchema,
-
-  // Rocket stats
-  height: { type: Number, required: true },
-  payload: { type: Number, required: true },
-  stages: { type: Number, required: true },
-  costPerLaunch: { type: Number, required: true },
-  totalLaunches: { type: Number, required: true },
-  successes: { type: Number, required: true },
-  failures: { type: Number, required: true }
+  image: imageSchema
 });
 
 module.exports = mongoose.model('Rocket', rocketSchema);

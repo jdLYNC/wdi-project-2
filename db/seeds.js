@@ -19,19 +19,10 @@ Rocket
       manufacturer: 'SpaceX',
       country: 'USA',
       description: 'Falcon 9 is a family of two-stage-to-orbit launch vehicles, named for its use of nine first-stage engines, designed and manufactured by SpaceX. The Falcon 9 versions are Falcon 9 v1.0 (retired), Falcon 9 v1.1 (retired), and the current Falcon 9 Full Thrust, a partially-reusable launch system. Both stages are powered by rocket engines that burn liquid oxygen (LOX) and rocket-grade kerosene (RP-1) propellants. The first stage is designed to be reusable, while the second stage is not.',
-      firstFlight: '4 June 2010',
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Iridium-1_Launch_%2832312419215%29.jpg',
         description: 'SpaceX’s Falcon 9 Full Thrust rocket lifts off from Vandenberg Air Force Base SLC-4E with the first ten Iridium NEXT communication satellites (January 2017).'
-      },
-      // Rocket stats
-      height: 70,
-      payload: 22800,
-      stages: 2,
-      costPerLaunch: 62,
-      totalLaunches: 41,
-      successes: 39,
-      failures: 2
+      }
     }, { // Rocket info
       name: 'Saturn V',
       manufacturer: ['Boeing', 'North American', 'Douglas'],
@@ -41,15 +32,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Skylab-73-HC-440HR.jpg/1024px-Skylab-73-HC-440HR.jpg',
         description: 'The last Saturn V launch carried the Skylab space station to low Earth orbit in place of the third stage'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }, { // Rocket info
       name: 'Long March',
       manufacturer: 'CALT',
@@ -59,15 +42,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/The_Launch_of_Long_March_3B_Rocket.jpg/1024px-The_Launch_of_Long_March_3B_Rocket.jpg',
         description: 'The launch of a Long March 3B carrier rocket at Xichang Satellite Launch Center.'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }, { // Rocket info
       name: 'Soyuz-2',
       manufacturer: 'TsSKB-Progress',
@@ -77,15 +52,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Soyuz_2_metop.jpg/540px-Soyuz_2_metop.jpg',
         description: 'A MetOp spacecraft ready for the launch atop a Soyuz-2.1a rocket.'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }, { // Rocket info
       name: 'Ariane 4',
       manufacturer: 'Arianespace',
@@ -95,15 +62,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Ariane4.jpg',
         description: 'The first ever Ariane 4 launch from Kourou on June 14, 1988'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }, { // Rocket info
       name: 'Falcon Heavy',
       manufacturer: 'SpaceX',
@@ -113,15 +72,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg/1024px-Pad_39_A_Falcon_Heavy_Artist_Cropped.jpg',
         description: 'Artist\'s representation of Falcon Heavy Reusable on launch pad'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }, { // Rocket info
       name: 'Delta IV',
       manufacturer: ['Boeing', 'BDS', 'ULA'],
@@ -131,15 +82,7 @@ Rocket
       image: {
         url: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Delta_IV_Medium_Rocket_DSCS.jpg',
         description: 'Delta IV Medium launch carrying DSCS III-B6'
-      },
-      // Rocket stats
-      height: 110.6,
-      payload: 140000,
-      stages: 3,
-      costPerLaunch: 185,
-      totalLaunches: 13,
-      successes: 12,
-      failures: 1
+      }
     }
   ])
   .then((rocket) => console.log(`${rocket.length} rockets created!`))

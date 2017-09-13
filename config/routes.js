@@ -39,6 +39,7 @@ router.route('/login')
 router.get('/logout', sessions.delete);
 
 router.route('/users/messages')
+  .get(secureRoute, users.show)
   .post(secureRoute, messages.create);
 
 router.route('/users/messages/new')

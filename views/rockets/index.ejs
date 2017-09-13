@@ -7,7 +7,7 @@
   <div class="row img-index">
     <% rockets.forEach(rocket => { %>
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <a href="/rockets/<%= rocket.id %>">
+        <a href="/rockets/<%= rocket.id %>"><h3><%= rocket.name %></h3>
           <div class="index-img" style="background-image: url(<%= rocket.image.url %>)">
             <% if(locals.isAuthenticated) { %>
               <form method="POST" action="/rockets/<%= rocket.id %>/favorite" class="favorite">

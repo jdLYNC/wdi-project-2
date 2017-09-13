@@ -45,6 +45,7 @@ function rocketsUpdate(req, res) {
   Rocket
     .findById(req.params.id)
     .exec()
+    .then(console.log(req.body))
     .then(rocket => {
       rocket = Object.assign(rocket, req.body);
       return rocket.save();

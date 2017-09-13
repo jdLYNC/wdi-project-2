@@ -10,10 +10,10 @@ function sessionsCreate(req, res) {
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
         req.flash('danger', 'Invalid credentials, please try again.' );
-        res.redirect('/login');
+        res.redirect('/');
       }
       req.session.userId = user.id;
-      res.redirect('/');
+      res.redirect('/rockets');
     });
 }
 

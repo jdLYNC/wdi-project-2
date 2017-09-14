@@ -1,7 +1,6 @@
 # GA WDI Project 2 - Roquette
 
-<img src="https://i.imgur.com/GVSBt0I.png" alt="roquette homepage with registration page loaded in">
-Roquette homepage with registration page included using ejs partials.
+<img src="https://i.imgur.com/GVSBt0I.png" alt="roquette homepage with registration page loaded in">Roquette homepage with registration page included using ejs partials.
 
 ## Premise
 Roquette is a site for rocket enthusiasts to see pictures of rockets and get information about them.

@@ -27,6 +27,7 @@ The greatest technical challenge for me was with the use of Bootstrap and implem
 My primary success with Roquette was the implementation of the internal messenger system.  This was achieved through the creation of a message model with `to`, `from` and `text` properties.  Logged in users can access the `messages/_new` view to write and send messages, and the `messages/_index` view to read their message history.  To streamline the UX (while maintaining the RESTful structure) these views were included in the `users/show` view and were available side by side.  Bootstraps flex classes were applied with `if... else` statements to create an iMessage style chat view.
 
 Partials and EJS `if... else` statements were widely used throughout my site to improve UX.  Examples are the reloading of the homepage with `registrations/_new` included and the dynamically updating navbar which adapts content and presentation depending on screensize.
+
 <img src="https://i.imgur.com/xwz0T2y.png" alt="direct messaging in roquette">
 
 ## Improvements

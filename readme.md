@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/GVSBt0I.png" alt="registration homepage with registration page loaded in using ejs partials">
 
 ## Premise
-Roquette is a site for rocket enthusiasts to pictures of rockets and get information about them.
+Roquette is a site for rocket enthusiasts to see pictures of rockets and get information about them.
 
 ## Brief
 To build a full-stack RESTful application with authentication and CRUD actions, styled with a CSS framework.

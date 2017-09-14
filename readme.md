@@ -28,6 +28,8 @@ My primary success with Roquette was the implementation of the internal messenge
 
 Partials and EJS `if... else` statements were widely used throughout my site to improve UX.  Examples are the reloading of the homepage with `registrations/_new` included and the dynamically updating navbar which adapts content and presentation depending on screensize.
 
+<img src="https://i.imgur.com/xwz0T2y.png">
+
 ## Improvements
 Having concluded the project there are a number of additional features and improvements I would like to make in future iterations, these include:
 ### Technical Changes

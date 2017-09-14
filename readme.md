@@ -1,6 +1,6 @@
 # GA WDI Project 2 - Roquette
 
-<img src="https://i.imgur.com/IR40Yi6.png">
+<img src="https://i.imgur.com/IR40Yi6.png" alt="roquette homepage">
 
 ## Premise
 Roquette is a site for rocket enthusiasts to pictures of rockets and get information about them.
@@ -27,8 +27,8 @@ The greatest technical challenge for me was with the use of Bootstrap and implem
 My primary success with Roquette was the implementation of the internal messenger system.  This was achieved through the creation of a message model with `to`, `from` and `text` properties.  Logged in users can access the `messages/_new` view to write and send messages, and the `messages/_index` view to read their message history.  To streamline the UX (while maintaining the RESTful structure) these views were included in the `users/show` view and were available side by side.  Bootstraps flex classes were applied with `if... else` statements to create an iMessage style chat view.
 
 Partials and EJS `if... else` statements were widely used throughout my site to improve UX.  Examples are the reloading of the homepage with `registrations/_new` included and the dynamically updating navbar which adapts content and presentation depending on screensize.
-
-<img src="https://i.imgur.com/xwz0T2y.png">
+<img src="https://i.imgur.com/GVSBt0I.png" alt="registration page loaded into the roquette homepage using partials">
+<img src="https://i.imgur.com/xwz0T2y.png" alt="direct messaging in roquette">
 
 ## Improvements
 Having concluded the project there are a number of additional features and improvements I would like to make in future iterations, these include:

@@ -1,5 +1,7 @@
 #Roquette
 
+<img src="https://i.imgur.com/IR40Yi6.png">
+
 *GA WDI Project-2
 
 ### Premise

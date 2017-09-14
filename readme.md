@@ -17,11 +17,11 @@ To build a full-stack RESTful application with authentication and CRUD actions, 
 In addition to the core requirements for this project Roquette contains a number of additional features such as, favoriting, basic user and admin level accounts, an internal direct messaging system and well implemented responsive design.
 
 ## Challenges
-My primary challenge with this project was managing the project timeline.  With only 4 days to take this project from ideation to presentation having clear targets for each day was key and something which I failed to succesfully implement.
+My primary challenges with this project were more related to managing workflow than technical issues.  With only 4 days to take this project from ideation to presentation managing the project timeline and having clear targets for each day was key, something which I failed to implement.
 
 The technologies worked with did not present a significant challenge though I believe I could have produced cleaner code then I ultimately delivered.
 
-The greatest technical challenge for me was with the use of Bootstrap and implementation of satisfactory styling throughout the site.  In part this problem stemmed from my approach to the project being feature-led, considering first all the features I wished to add and considering styling at the end.  Having now dealt with this my approach in future will be to consider design throughout the development process and not only as an afterthought.
+The greatest technical challenge for me was with the use of Bootstrap in implementating satisfactory styling throughout the site.  In part this problem stemmed from my approach to the project being feature-led, considering first all the features I wished to add and styling at the end.  In future I will consider and partially implement design throughout the development process and not only in the final stages.
 
 ## Successes
 My primary success with Roquette was the implementation of the internal messenger system.  This was achieved through the creation of a message model with `to`, `from` and `text` properties.  Logged in users can access the `messages/_new` view to write and send messages, and the `messages/_index` view to read their message history.  To streamline the UX (while maintaining the RESTful structure) these views were included in the `users/show` view and were available side by side.  Bootstraps flex classes were applied with `if... else` statements to create an iMessage style chat view.
@@ -39,10 +39,12 @@ Having concluded the project there are a number of additional features and impro
 * Group messaging.
 * A 'Keep me logged in' feature.
 * Unread message notifications.
+* A rotation of homepage images.
+* Expanded user profiles with profile pictures etc.
 * Cleaner code.
 ### Non-technical Changes
-* Expanding the scope of the site from a purely rocket based experience.
-* Enabling all users to post rockets rather than just admins.
+* Changing the topic (& name) of the site from a purely rocket based experience to something with more general appeal.
+* Enabling all users to make posts rather than just admins.
 
 ## Link ##
 [Visit Roquette on Heroku](https://roquette.herokuapp.com/ "Roquette")

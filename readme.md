@@ -12,7 +12,8 @@ To build a full-stack RESTful application with authentication and CRUD actions, 
 ## Technologies used
 * HTML5
 * CSS, **Boostrap**, SCSS
-* JavaScript, **Express** (flash, sessions), **EJS** (layouts), **MongoDB**, **Mongoose ODM**, **bcrypt**
+* JavaScript, **Express** (flash, sessions), **EJS** (layouts), **Node.JS**, **Mongoose ODM**, **bcrypt**
+* Db- **MondoDB**, task runner- Gulp, package manager- Yarn
 
 ## Features
 In addition to the core requirements for this project Roquette contains a number of additional features such as, favoriting, basic user and admin level accounts, an internal direct messaging system and well implemented responsive design.

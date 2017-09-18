@@ -1,6 +1,5 @@
-# GA WDI Project 2 - Roquette
 [Premise](#premise "premise") - [Brief](#brief "brief") - [Approach](#approach "approach") - [Technologies](#technologies-used "technologies") - [Features](#features "features") - [Challenges](#challenges "challenges") - [Successes](#successes "successes") - [Improvements](#improvements "improvements") - [Roquette](https://roquette.herokuapp.com/ "Roquette")
-
+# GA WDI Project 2 - Roquette
 <img src="https://i.imgur.com/GVSBt0I.png" alt="roquette homepage with registration page loaded in">
 
 ## Premise

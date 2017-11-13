@@ -10,7 +10,7 @@ To build a full-stack RESTful application with authentication and CRUD actions, 
 
 ## Technologies used
 * HTML5
-* CSS, **Boostrap**, SCSS
+* CSS, **Bootstrap**, SCSS
 * JavaScript, **Express** (flash, sessions), **EJS** (layouts), **Node.JS**, **Mongoose ODM**, **bcrypt**
 * **MondoDB**, Gulp, Yarn
 

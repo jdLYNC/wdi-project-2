@@ -20,7 +20,7 @@ In addition to the core requirements for this project Roquette contains a number
 ## Challenges
 My primary challenges with this project were more related to managing workflow than technical issues.  With only 4 days to take this project from ideation to presentation managing the project timeline and having clear targets for each day was key, something which I failed to implement.
 
-The technologies worked with did not present a significant challenge though I believe I could have produced cleaner code then I ultimately delivered.
+The technologies worked with did not present a significant challenge though I believe I could have produced cleaner code than I ultimately delivered.
 
 The greatest technical challenge for me was with the use of Bootstrap in implementating satisfactory styling throughout the site.  In part this problem stemmed from my approach to the project being feature-led, considering first all the features I wished to add and styling at the end.  In future I will consider and partially implement design throughout the development process and not only in the final stages.
 
